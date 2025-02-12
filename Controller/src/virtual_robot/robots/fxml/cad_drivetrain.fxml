@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Rectangle?>
+
+<Group xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="virtual_robot.robots.classes.CADrivetrain">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="70.0" stroke="BLACK" strokeType="INSIDE" width="75.0" y="5.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#f2ff00" strokeType="INSIDE" width="10.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" stroke="#f2ff00" strokeType="INSIDE" width="10.0" x="65.0" />
+        <Rectangle fx:id="backServoArm" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="10.0" y="10.0" />
+      <Rectangle fx:id="backServoArm1" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="56.0" y="10.0" />
+      <Rectangle fx:id="backServoArm2" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="15.0" y="6.0" />
+      <Rectangle fx:id="backServoArm21" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="51.0" y="6.0" />
+      <Rectangle fx:id="backServoArm22" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="20.0" y="2.0" />
+      <Rectangle fx:id="backServoArm211" arcHeight="5.0" arcWidth="5.0" fill="#9f9f9f" height="60.0" stroke="BLACK" strokeType="INSIDE" width="9.0" x="46.0" y="2.0" />
+      <CubicCurve controlX1="28.5" controlX2="46.0" controlY1="20.0" controlY2="20.0" endX="46.0" endY="2.5" startX="28.5" startY="2.5" stroke="#f2ff00" />
+    </children>
+</Group>
