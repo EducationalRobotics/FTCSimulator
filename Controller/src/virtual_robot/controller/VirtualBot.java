@@ -44,6 +44,22 @@ import org.dyn4j.world.World;
  */
 public abstract class VirtualBot {
 
+    protected enum HubType{
+        CONTROL_HUB, EXPANSION_HUB
+    }
+
+    protected static class PortConfig{
+        public final int PORT_NUM;
+        public final HubType HUB_TYPE;
+        public final String PORT_NAME;
+
+        public PortConfig(int num, HubType type, String name){
+            this.PORT_NUM = num;
+            this.PORT_NAME = name;
+            this.HUB_TYPE = type;
+        }
+    }
+
     protected static VirtualRobotController controller;
 
     protected HardwareMap hardwareMap;
@@ -79,11 +95,14 @@ public abstract class VirtualBot {
     public double getY() { return y; }
     public double getHeadingRadians(){ return headingRadians; }
 
-    public VirtualBot(){
+    public VirtualBot(double botWidthInches){
         fieldPane = controller.getFieldPane();
-        botWidth = VirtualField.FIELD_WIDTH / 8.0;
+        botWidth = VirtualField.FIELD_WIDTH / (6*24) * botWidthInches;
         halfBotWidth = botWidth / 2.0;
         world = controller.getWorld();
+    }
+    public VirtualBot(){
+        this(18);
     }
 
     /**

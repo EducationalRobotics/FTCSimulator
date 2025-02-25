@@ -46,8 +46,9 @@ import com.qualcomm.robotcore.hardware.DcMotorImpl;
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 import virtual_robot.robots.ControlsElements;
-import virtual_robot.robots.classes.MecanumBot;
 import virtual_robot.keyboard.KeyState;
+import virtual_robot.robots.classes.CADrivetrain;
+import virtual_robot.robots.classes.disabled.MecanumBot;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -308,7 +309,7 @@ public class VirtualRobotController {
                 validConfigClasses.add(c);
         }
         cbxConfig.setItems(validConfigClasses);
-        cbxConfig.setValue(MecanumBot.class);
+        cbxConfig.setValue(CADrivetrain.class);
 
         cbxConfig.setCellFactory(new Callback<ListView<Class<?>>, ListCell<Class<?>>>() {
             @Override

@@ -12,6 +12,8 @@ import org.firstinspires.ftc.robotcore.external.navigation.CurrentUnit;
 
 public class DcMotorExImpl extends DcMotorImpl implements DcMotorEx{
 
+    public DeadWheelEncoder replacedEnc;
+
     /**
      * For internal use only.
      * @param motorType
@@ -28,6 +30,19 @@ public class DcMotorExImpl extends DcMotorImpl implements DcMotorEx{
     @Override
     public void setMotorDisable() {
         throw new NotImplementedException("setMotorDisable method has not been implemented in DcMotorExImpl.");
+    }
+
+    public void replaceEncInput(DeadWheelEncoder e) {
+        this.replacedEnc = e;
+    }
+
+    @Override
+    public synchronized int getCurrentPosition() {
+        if(this.replacedEnc==null){
+            return super.getCurrentPosition();
+        } else {
+            return replacedEnc.getCurrentPosition();
+        }
     }
 
     @Override
